@@ -6,9 +6,11 @@
 #include <Segment.h>
 #include <Endpoint.h>
 
-// Represents a Raceway graph.  This stores the Segment and Endpoint
-// objects that make up the graph.  The graph can be built by adding
-// endpoints and segments and can be queried.
+/**
+ * @brief Represents a Raceway graph.  This stores the Segment and Endpoint
+ * objects that make up the graph.  The graph can be built by adding
+ * endpoints and segments and can be queried.
+ */
 class Raceway
 {
 public:
@@ -17,27 +19,53 @@ public:
     
     Raceway() = default;
 
-    // Add an endpoint to the raceway.
+    /**
+     * @brief Add an endpoint to the raceway.
+     * 
+     * @param endpoint 
+     */
     void add_endpoint(Endpoint_H endpoint);
 
-    // Add a segment to the raceway.  Both endpoints of the segment
-    // must be be populated, and must already be stored in the
-    // raceway.
+    /**
+     * @brief Add a segment to the raceway.  Both endpoints of the segment
+     * must be populated, and must already be stored in the
+     * raceway.
+     * 
+     * @param segment 
+     */
     void add_segment(Segment_H segment);
 
-    // Get the endpoints and segments.
+    /**
+     * @brief Get the endpoints
+     * 
+     * @return const Endpoints 
+     */
     const Endpoints endpoints() const;
+
+    /**
+     * @brief Get the segments
+     * 
+     * @return const Segments& 
+     */
     const Segments& segments() const;
 
-    // Return the degree (in the graph theory sense) of an endpoint in
-    // the raceway.  The degree is the number of segments in the
-    // raceway that use this endpoint.
+    /**
+     * @brief Return the degree (in the graph theory sense) of an endpoint in
+     * the raceway.  The degree is the number of segments in the
+     * raceway that use this endpoint.
+     * 
+     * @param endpoint 
+     * @return int 
+     */
     int degree(Endpoint_H endpoint) const;
 
 private:
     Segments m_segments;
     Endpoints m_endpoints;
-    // TODO: you may add more data members here
+
+    /**
+     * @todo: you may add more data members here
+     */
 };
 
 #endif

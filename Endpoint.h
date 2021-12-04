@@ -7,21 +7,36 @@
 class Endpoint;
 using Endpoint_H = std::shared_ptr<Endpoint>;
 
-// Represents an endpoint in the raceway.  The endpoint has a 3D
-// position and a flag to indicate whether or not it needs to be
-// reinforced.
+/**
+ * @brief Represents an endpoint in the raceway.  The endpoint has a 3D
+ * position and a flag to indicate whether or not it needs to be
+ * reinforced.
+ */
 class Endpoint
 {
 public:
     Endpoint(const Vector& pos);
 
-    // Set whether or not this endpoint needs to be reinforced.
+    /**
+     * @brief Set whether or not this endpoint needs to be reinforced.
+     * 
+     * @param reinforced_ 
+     */
     void set_reinforced(bool reinforced_);
 
-    // Return whether or not this endpoint needs to be reinforced.
+    /**
+     * @brief Return whether or not this endpoint needs to be reinforced.
+     * 
+     * @return true 
+     * @return false 
+     */
     bool reinforced() const;
 
-    // Return the position of the endpoint.
+    /**
+     * @brief Return the position of the endpoint in 3D Cartesian coordinates
+     * 
+     * @return const Vector& 
+     */
     const Vector& position() const;
 
 private:

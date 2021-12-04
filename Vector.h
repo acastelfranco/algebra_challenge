@@ -3,43 +3,91 @@
 
 #include <ostream>
 
-// Represents a point or a vector with 3D Cartesian coordinates.
+/**
+ * @brief Represents a point or a vector with 3D Cartesian coordinates.
+ */
 class Vector
 {
 public:
     Vector();
     Vector(double x, double y, double z);
 
-    // Returns the length of the vector.
+    /**
+     * @brief Returns the length of the vector.
+     * 
+     * @return double 
+     */
     double length() const;
 
-    // Returns the dot product of this vector with another one.
+    /**
+     * @brief Returns the dot product of this vector with another one.
+     * 
+     * @param b 
+     * @return double 
+     */
     double dot(const Vector& b) const;
 
-    // Returns a new vector with the same direction but having length 1.
+    /**
+     * @brief Returns a new vector with the same direction but having length 1.
+     * 
+     * @return Vector 
+     */
     Vector normalized() const;
 
     // The coordinates of the vector are public.
+    /**
+     * @brief The coordinates of the vector are public.
+     */
     double m_v[3];
 };
 
-//
-// operators and free functions
-//
+/**
+ * operators and free functions
+ */
 
-// Vector addition
+/**
+ * @brief Vector addition
+ * 
+ * @param a 
+ * @param b 
+ * @return Vector 
+ */
 Vector operator+(const Vector& a, const Vector& b);
 
-// Vector subtraction
+/**
+ * @brief Vector subtraction
+ * 
+ * @param a 
+ * @param b 
+ * @return Vector 
+ */
 Vector operator-(const Vector& a, const Vector& b);
 
-// Scalar/vector multiplication.
+/**
+ * @brief Scalar/vector multiplication.
+ * 
+ * @param a 
+ * @param b 
+ * @return Vector 
+ */
 Vector operator*(double a, const Vector&b);
 
-// Output the std::ostream for debugging.
+/**
+ * @brief Output the std::ostream for debugging.
+ * 
+ * @param os 
+ * @param a 
+ * @return std::ostream& 
+ */
 std::ostream& operator<<(std::ostream& os, const Vector& a);
 
-// Returns distance between two points.
+/**
+ * @brief Returns distance between two points.
+ * 
+ * @param a 
+ * @param b 
+ * @return double 
+ */
 double distance(const Vector& a, const Vector& b);
 
 #endif
