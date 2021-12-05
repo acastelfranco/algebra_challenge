@@ -1,4 +1,5 @@
 #include <cmath>
+#include <Utils.h>
 #include <Vector.h>
 
 Vector::Vector()
@@ -77,4 +78,11 @@ double
 distance(const Vector& a, const Vector& b)
 {
     return (a - b).length();
+}
+
+bool
+close(const Vector& a, const Vector& b, double epsilon)
+{
+    double d = distance(a, b);
+    return utils::math::close(d, 0, epsilon);
 }

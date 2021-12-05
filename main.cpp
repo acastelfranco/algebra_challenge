@@ -1,12 +1,9 @@
 #include <cassert>
-#include <tests.h>
+#include <iostream>
 
 int
 main()
 {
-    // Run three support computation tests.
-    test1();
-    test2();
-    test3();
+    std::cout << "Do something reasonable with the main program" << std::endl;
     return 0;
 }

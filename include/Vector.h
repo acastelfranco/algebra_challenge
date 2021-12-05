@@ -90,4 +90,17 @@ std::ostream& operator<<(std::ostream& os, const Vector& a);
  */
 double distance(const Vector& a, const Vector& b);
 
+
+/**
+ * @brief Returns whether the distance between two points is within an epsilon.
+ * 
+ * @param a 
+ * @param b 
+ * @param epsilon 
+ * @return true 
+ * @return false 
+ */
+bool
+close(const Vector& a, const Vector& b, double epsilon = 1e-4);
+
 #endif

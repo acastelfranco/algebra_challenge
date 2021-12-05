@@ -1,14 +1,16 @@
-#ifndef TESTS_H
-#define TESTS_H
+#pragma once
 
-/**
- * @brief These are three test cases for the support computation algorithm.
- * Each has a hard-coded representation of a raceway.  The
- * cooresponding Raceway object is then built, and the support
- * computation is invoked.  The results are tested with explicit code.
- */
-void test1();
-void test2();
-void test3();
+#include <cassert>
+#include <cmath>
+#include <map>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <Utils.h>
+#include <Vector.h>
+#include <Raceway.h>
+#include <compute_supports.h>
+#include <catch.hpp>
 
-#endif
+using namespace utils::math;
+using namespace utils::testdata;
