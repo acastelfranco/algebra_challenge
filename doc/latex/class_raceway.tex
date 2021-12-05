@@ -1,0 +1,175 @@
+\hypertarget{class_raceway}{}\doxysection{Raceway Class Reference}
+\label{class_raceway}\index{Raceway@{Raceway}}
+
+
+Represents a \mbox{\hyperlink{class_raceway}{Raceway}} graph. This stores the \mbox{\hyperlink{class_segment}{Segment}} and \mbox{\hyperlink{class_endpoint}{Endpoint}} objects that make up the graph. The graph can be built by adding endpoints and segments and can be queried.  
+
+
+
+
+{\ttfamily \#include $<$Raceway.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_raceway_a0f662e355bed52252f7d21a18b5f22a0}{Segments}} = std\+::set$<$ \mbox{\hyperlink{_segment_8h_a57ea77ba3e97dfeb3887e31e275ee55c}{Segment\+\_\+H}} $>$
+\item 
+using \mbox{\hyperlink{class_raceway_aa8a5f11360194a986fe7702535b0c6ed}{Endpoints}} = std\+::set$<$ \mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_raceway_a825ddcd4a029a9d557390e39d71a18d3}{Raceway}} ()=default
+\item 
+void \mbox{\hyperlink{class_raceway_a9513f2a0a4adaecc62e003abe0d257ae}{add\+\_\+endpoint}} (\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} endpoint)
+\begin{DoxyCompactList}\small\item\em Add an endpoint to the raceway. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raceway_a8cf4fb7deb33b3a0ea248ee82c637808}{add\+\_\+segment}} (\mbox{\hyperlink{_segment_8h_a57ea77ba3e97dfeb3887e31e275ee55c}{Segment\+\_\+H}} segment)
+\begin{DoxyCompactList}\small\item\em Add a segment to the raceway. Both endpoints of the segment must be populated, and must already be stored in the raceway. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_raceway_aa8a5f11360194a986fe7702535b0c6ed}{Endpoints}} \mbox{\hyperlink{class_raceway_a8a62648300e33c02740a8e6a5d74dc55}{endpoints}} () const
+\begin{DoxyCompactList}\small\item\em Get the endpoints. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_raceway_a0f662e355bed52252f7d21a18b5f22a0}{Segments}} \& \mbox{\hyperlink{class_raceway_a61d2b662f504ef4aaa55bd6c1d53d721}{segments}} () const
+\begin{DoxyCompactList}\small\item\em Get the segments. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_raceway_a59bb619cdbdc25fe09768d9314172552}{degree}} (\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} endpoint) const
+\begin{DoxyCompactList}\small\item\em Return the degree (in the graph theory sense) of an endpoint in the raceway. The degree is the number of segments in the raceway that use this endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{class_raceway}{Raceway}} graph. This stores the \mbox{\hyperlink{class_segment}{Segment}} and \mbox{\hyperlink{class_endpoint}{Endpoint}} objects that make up the graph. The graph can be built by adding endpoints and segments and can be queried. 
+
+Definition at line 14 of file Raceway.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_raceway_aa8a5f11360194a986fe7702535b0c6ed}\label{class_raceway_aa8a5f11360194a986fe7702535b0c6ed}} 
+\index{Raceway@{Raceway}!Endpoints@{Endpoints}}
+\index{Endpoints@{Endpoints}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{Endpoints}{Endpoints}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_raceway_aa8a5f11360194a986fe7702535b0c6ed}{Raceway\+::\+Endpoints}} =  std\+::set$<$\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}}$>$}
+
+
+
+Definition at line 18 of file Raceway.\+h.
+
+\mbox{\Hypertarget{class_raceway_a0f662e355bed52252f7d21a18b5f22a0}\label{class_raceway_a0f662e355bed52252f7d21a18b5f22a0}} 
+\index{Raceway@{Raceway}!Segments@{Segments}}
+\index{Segments@{Segments}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{Segments}{Segments}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_raceway_a0f662e355bed52252f7d21a18b5f22a0}{Raceway\+::\+Segments}} =  std\+::set$<$\mbox{\hyperlink{_segment_8h_a57ea77ba3e97dfeb3887e31e275ee55c}{Segment\+\_\+H}}$>$}
+
+
+
+Definition at line 17 of file Raceway.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_raceway_a825ddcd4a029a9d557390e39d71a18d3}\label{class_raceway_a825ddcd4a029a9d557390e39d71a18d3}} 
+\index{Raceway@{Raceway}!Raceway@{Raceway}}
+\index{Raceway@{Raceway}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{Raceway()}{Raceway()}}
+{\footnotesize\ttfamily Raceway\+::\+Raceway (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_raceway_a9513f2a0a4adaecc62e003abe0d257ae}\label{class_raceway_a9513f2a0a4adaecc62e003abe0d257ae}} 
+\index{Raceway@{Raceway}!add\_endpoint@{add\_endpoint}}
+\index{add\_endpoint@{add\_endpoint}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{add\_endpoint()}{add\_endpoint()}}
+{\footnotesize\ttfamily void Raceway\+::add\+\_\+endpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}}}]{endpoint }\end{DoxyParamCaption})}
+
+
+
+Add an endpoint to the raceway. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Raceway.\+cpp.
+
+\mbox{\Hypertarget{class_raceway_a8cf4fb7deb33b3a0ea248ee82c637808}\label{class_raceway_a8cf4fb7deb33b3a0ea248ee82c637808}} 
+\index{Raceway@{Raceway}!add\_segment@{add\_segment}}
+\index{add\_segment@{add\_segment}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{add\_segment()}{add\_segment()}}
+{\footnotesize\ttfamily void Raceway\+::add\+\_\+segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_segment_8h_a57ea77ba3e97dfeb3887e31e275ee55c}{Segment\+\_\+H}}}]{segment }\end{DoxyParamCaption})}
+
+
+
+Add a segment to the raceway. Both endpoints of the segment must be populated, and must already be stored in the raceway. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Raceway.\+cpp.
+
+\mbox{\Hypertarget{class_raceway_a59bb619cdbdc25fe09768d9314172552}\label{class_raceway_a59bb619cdbdc25fe09768d9314172552}} 
+\index{Raceway@{Raceway}!degree@{degree}}
+\index{degree@{degree}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{degree()}{degree()}}
+{\footnotesize\ttfamily int Raceway\+::degree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}}}]{endpoint }\end{DoxyParamCaption}) const}
+
+
+
+Return the degree (in the graph theory sense) of an endpoint in the raceway. The degree is the number of segments in the raceway that use this endpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Raceway.\+cpp.
+
+\mbox{\Hypertarget{class_raceway_a8a62648300e33c02740a8e6a5d74dc55}\label{class_raceway_a8a62648300e33c02740a8e6a5d74dc55}} 
+\index{Raceway@{Raceway}!endpoints@{endpoints}}
+\index{endpoints@{endpoints}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{endpoints()}{endpoints()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_raceway_aa8a5f11360194a986fe7702535b0c6ed}{Raceway\+::\+Endpoints}} Raceway\+::endpoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the endpoints. 
+
+\begin{DoxyReturn}{Returns}
+const Endpoints 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Raceway.\+cpp.
+
+\mbox{\Hypertarget{class_raceway_a61d2b662f504ef4aaa55bd6c1d53d721}\label{class_raceway_a61d2b662f504ef4aaa55bd6c1d53d721}} 
+\index{Raceway@{Raceway}!segments@{segments}}
+\index{segments@{segments}!Raceway@{Raceway}}
+\doxysubsubsection{\texorpdfstring{segments()}{segments()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_raceway_a0f662e355bed52252f7d21a18b5f22a0}{Raceway\+::\+Segments}} \& Raceway\+::segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the segments. 
+
+\begin{DoxyReturn}{Returns}
+const Segments\& 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Raceway.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_raceway_8h}{Raceway.\+h}}\item 
+src/\mbox{\hyperlink{_raceway_8cpp}{Raceway.\+cpp}}\end{DoxyCompactItemize}

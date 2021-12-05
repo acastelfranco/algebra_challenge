@@ -1,0 +1,149 @@
+\hypertarget{class_segment}{}\doxysection{Segment Class Reference}
+\label{class_segment}\index{Segment@{Segment}}
+
+
+Represents a segment in the raceway. A segment is created with the endpoints at the start and end of the segment.  
+
+
+
+
+{\ttfamily \#include $<$Segment.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_segment_ae20ef3e21205863ef713daf49b18fa33}{Segment}} (\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} start\+\_\+, \mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} end\+\_\+)
+\item 
+\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} \mbox{\hyperlink{class_segment_a785899cf27469afdbcc8000ebfe24fe7}{start}} () const
+\begin{DoxyCompactList}\small\item\em Get the start endpoint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} \mbox{\hyperlink{class_segment_ac04a0545187f485baeae03032c4101ad}{end}} () const
+\begin{DoxyCompactList}\small\item\em Get the end endpoint. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vector}{Vector}} \& \mbox{\hyperlink{class_segment_a38f6f659f7264369d513c15404b6d4d6}{start\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Get the start endpoint position. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vector}{Vector}} \& \mbox{\hyperlink{class_segment_a9a1deb6089a5918e74ffd8098fc0ab71}{end\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Get the end endpoint position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a segment in the raceway. A segment is created with the endpoints at the start and end of the segment. 
+
+Definition at line 14 of file Segment.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_segment_ae20ef3e21205863ef713daf49b18fa33}\label{class_segment_ae20ef3e21205863ef713daf49b18fa33}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}}}]{start\+\_\+,  }\item[{\mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}}}]{end\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Segment.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_segment_ac04a0545187f485baeae03032c4101ad}\label{class_segment_ac04a0545187f485baeae03032c4101ad}} 
+\index{Segment@{Segment}!end@{end}}
+\index{end@{end}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} Segment\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the end endpoint. 
+
+\begin{DoxyReturn}{Returns}
+Endpoint\+\_\+H 
+\end{DoxyReturn}
+
+
+Definition at line 15 of file Segment.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{class_segment_ac04a0545187f485baeae03032c4101ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_segment_a9a1deb6089a5918e74ffd8098fc0ab71}\label{class_segment_a9a1deb6089a5918e74ffd8098fc0ab71}} 
+\index{Segment@{Segment}!end\_pos@{end\_pos}}
+\index{end\_pos@{end\_pos}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{end\_pos()}{end\_pos()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector}{Vector}} \& Segment\+::end\+\_\+pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the end endpoint position. 
+
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{class_vector}{Vector}}\& 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Segment.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{class_segment_a9a1deb6089a5918e74ffd8098fc0ab71_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_segment_a785899cf27469afdbcc8000ebfe24fe7}\label{class_segment_a785899cf27469afdbcc8000ebfe24fe7}} 
+\index{Segment@{Segment}!start@{start}}
+\index{start@{start}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_endpoint_8h_a97423410fcabcbbc0ab6bc1950676311}{Endpoint\+\_\+H}} Segment\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the start endpoint. 
+
+\begin{DoxyReturn}{Returns}
+Endpoint\+\_\+H 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file Segment.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_segment_a785899cf27469afdbcc8000ebfe24fe7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_segment_a38f6f659f7264369d513c15404b6d4d6}\label{class_segment_a38f6f659f7264369d513c15404b6d4d6}} 
+\index{Segment@{Segment}!start\_pos@{start\_pos}}
+\index{start\_pos@{start\_pos}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{start\_pos()}{start\_pos()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector}{Vector}} \& Segment\+::start\+\_\+pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the start endpoint position. 
+
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{class_vector}{Vector}}\& 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file Segment.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_segment_a38f6f659f7264369d513c15404b6d4d6_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_segment_8h}{Segment.\+h}}\item 
+src/\mbox{\hyperlink{_segment_8cpp}{Segment.\+cpp}}\end{DoxyCompactItemize}

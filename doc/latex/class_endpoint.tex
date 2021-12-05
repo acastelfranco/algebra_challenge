@@ -1,0 +1,106 @@
+\hypertarget{class_endpoint}{}\doxysection{Endpoint Class Reference}
+\label{class_endpoint}\index{Endpoint@{Endpoint}}
+
+
+Represents an endpoint in the raceway. The endpoint has a 3D position and a flag to indicate whether or not it needs to be reinforced.  
+
+
+
+
+{\ttfamily \#include $<$Endpoint.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_endpoint_af563955d0c4ef20449124c2037e8a7ea}{Endpoint}} (const \mbox{\hyperlink{class_vector}{Vector}} \&pos)
+\item 
+void \mbox{\hyperlink{class_endpoint_adf9afed6c2324f31825a1814bac8a49e}{set\+\_\+reinforced}} (bool reinforced\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set whether or not this endpoint needs to be reinforced. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_endpoint_a652ea3f74e6aa871e2363ee8b2b61230}{reinforced}} () const
+\begin{DoxyCompactList}\small\item\em Return whether or not this endpoint needs to be reinforced. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vector}{Vector}} \& \mbox{\hyperlink{class_endpoint_adf4fb29127d95fab57ca2593e936c37c}{position}} () const
+\begin{DoxyCompactList}\small\item\em Return the position of the endpoint in 3D Cartesian coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an endpoint in the raceway. The endpoint has a 3D position and a flag to indicate whether or not it needs to be reinforced. 
+
+Definition at line 15 of file Endpoint.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_endpoint_af563955d0c4ef20449124c2037e8a7ea}\label{class_endpoint_af563955d0c4ef20449124c2037e8a7ea}} 
+\index{Endpoint@{Endpoint}!Endpoint@{Endpoint}}
+\index{Endpoint@{Endpoint}!Endpoint@{Endpoint}}
+\doxysubsubsection{\texorpdfstring{Endpoint()}{Endpoint()}}
+{\footnotesize\ttfamily Endpoint\+::\+Endpoint (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Endpoint.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_endpoint_adf4fb29127d95fab57ca2593e936c37c}\label{class_endpoint_adf4fb29127d95fab57ca2593e936c37c}} 
+\index{Endpoint@{Endpoint}!position@{position}}
+\index{position@{position}!Endpoint@{Endpoint}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector}{Vector}} \& Endpoint\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the position of the endpoint in 3D Cartesian coordinates. 
+
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{class_vector}{Vector}}\& 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file Endpoint.\+cpp.
+
+\mbox{\Hypertarget{class_endpoint_a652ea3f74e6aa871e2363ee8b2b61230}\label{class_endpoint_a652ea3f74e6aa871e2363ee8b2b61230}} 
+\index{Endpoint@{Endpoint}!reinforced@{reinforced}}
+\index{reinforced@{reinforced}!Endpoint@{Endpoint}}
+\doxysubsubsection{\texorpdfstring{reinforced()}{reinforced()}}
+{\footnotesize\ttfamily bool Endpoint\+::reinforced (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return whether or not this endpoint needs to be reinforced. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 15 of file Endpoint.\+cpp.
+
+\mbox{\Hypertarget{class_endpoint_adf9afed6c2324f31825a1814bac8a49e}\label{class_endpoint_adf9afed6c2324f31825a1814bac8a49e}} 
+\index{Endpoint@{Endpoint}!set\_reinforced@{set\_reinforced}}
+\index{set\_reinforced@{set\_reinforced}!Endpoint@{Endpoint}}
+\doxysubsubsection{\texorpdfstring{set\_reinforced()}{set\_reinforced()}}
+{\footnotesize\ttfamily void Endpoint\+::set\+\_\+reinforced (\begin{DoxyParamCaption}\item[{bool}]{reinforced\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Set whether or not this endpoint needs to be reinforced. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reinforced\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file Endpoint.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_endpoint_8h}{Endpoint.\+h}}\item 
+src/\mbox{\hyperlink{_endpoint_8cpp}{Endpoint.\+cpp}}\end{DoxyCompactItemize}
