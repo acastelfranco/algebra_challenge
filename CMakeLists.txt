@@ -21,10 +21,10 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Segment.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Vector.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Utils.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/catch.hpp
 )
 
 set (TESTS
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/catch.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.h
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0001.cpp
