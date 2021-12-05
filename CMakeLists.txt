@@ -20,6 +20,7 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Vector.h
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/TestData.h 
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/catch.hpp
 )
 
 add_executable (supports main.cpp ${SOURCES} ${HEADERS})
@@ -30,7 +31,7 @@ target_include_directories (supports
     ${CMAKE_CURRENT_SOURCE_DIR}/tests
 )
 
-target_compile_features(supports
+target_compile_features( supports
     PRIVATE
     cxx_std_14
 )
