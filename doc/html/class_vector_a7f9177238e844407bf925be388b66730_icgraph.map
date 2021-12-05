@@ -1,5 +1,0 @@
-<map id="Vector::dot" name="Vector::dot">
-<area shape="rect" id="node1" title="Returns the dot product of this vector with another one." alt="" coords="357,5,449,32"/>
-<area shape="rect" id="node2" href="$class_vector.html#ac724fdb52264b4933447b88132eb08ab" title="Returns the length of the vector." alt="" coords="197,5,309,32"/>
-<area shape="rect" id="node3" href="$class_vector.html#ac7b074194d64f769c9d6e39eb02223ae" title="Returns a new vector with the same direction but having length 1." alt="" coords="5,5,149,32"/>
-</map>

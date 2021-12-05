@@ -1,9 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,60,83"/>
-<area shape="rect" id="node2" href="$tests_8cpp.html#a1440a7779ac56f47a3f355ce4a8c7da0" title="These are three test cases for the support computation algorithm. Each has a hard&#45;coded representatio..." alt="" coords="108,5,163,32"/>
-<area shape="rect" id="node6" href="$tests_8cpp.html#a0283886819c7c140a023582b7269e2d0" title=" " alt="" coords="108,56,163,83"/>
-<area shape="rect" id="node7" href="$tests_8cpp.html#a6d0455dd5c30adda100e95f0423c786e" title=" " alt="" coords="108,107,163,133"/>
-<area shape="rect" id="node3" href="$compute__supports_8h.html#a22e4c8ef91e743910e685186d8f5acd1" title="Compute the locations of supports for all segments in the raceway. Also set the endpoints to be reinf..." alt="" coords="211,5,354,32"/>
-<area shape="rect" id="node4" href="$_vector_8h.html#aae1dd2d7950b0514b0fa4f1b0daa9a01" title="Returns distance between two points." alt="" coords="244,56,321,83"/>
-<area shape="rect" id="node5" href="$struct_test_data.html#aa337df0e6870e12b791208d0b6c3edd0" title="Populate a Raceway object from the hard&#45;coded test data. Also returns maps of the testing names for t..." alt="" coords="211,107,355,133"/>
-</map>
