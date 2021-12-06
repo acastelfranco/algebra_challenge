@@ -33,3 +33,4 @@
 
 # Compile dir
 build
+.vscode/settings.json
