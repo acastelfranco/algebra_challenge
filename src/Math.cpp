@@ -8,13 +8,37 @@ math::close(double a, double b, double epsilon)
 }
 
 double
-math::adjacent(double tiltdeg, double hypotenuse)
+math::adjacent(double tiltAngleDeg, double hypotenuse)
 {
-    return 0.0;
+    return std::cos(degToRad(tiltAngleDeg)) * hypotenuse;
 }
 
 double
-math::opposite(double tiltdeg, double hypotenuse)
+math::opposite(double tiltAngleDeg, double hypotenuse)
 {
-    return 0.0;
+    return std::sin(degToRad(tiltAngleDeg)) * hypotenuse;
+}
+
+double
+math::tiltAngleDeg(double opposite, double adjacent)
+{
+    return radToDeg(std::atan2(opposite, adjacent));
+}
+
+double
+math::hypotenuse(double opposite, double adjacent)
+{
+    return std::sqrt((opposite * opposite) + (adjacent * adjacent));
+}
+
+double
+math::hypotenuse(double tiltAngleDeg, Opposite &opposite)
+{
+    return opposite.lenght / std::sin(degToRad(tiltAngleDeg));
+}
+
+double
+math::hypotenuse(double tiltAngleDeg, Adjacent &adjacent)
+{
+    return adjacent.lenght / std::cos(degToRad(tiltAngleDeg));
 }

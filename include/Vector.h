@@ -34,7 +34,6 @@ public:
      */
     Vector normalized() const;
 
-    // The coordinates of the vector are public.
     /**
      * @brief The coordinates of the vector are public.
      */
