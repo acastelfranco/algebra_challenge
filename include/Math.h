@@ -2,8 +2,25 @@
 
 namespace math {
 
-    struct Side    { double lenght; };
+    /**
+     * @brief Implement a generic side of a polygon.
+     * We have just the lenght of the side for now.
+     * 
+     * Note: it could be used a Segment as a Side,
+     * but for now I would not like to add this dependency.
+     * These three structs are just to implement the right
+     * overloading for the hypotenuse functions .
+     */
+    struct Side { double lenght; };
+
+    /**
+     * @brief Implement the opposite side of a right triangle
+     */
     struct Opposite : public Side { };
+
+    /**
+     * @brief Implement the adjacent side of a right triangle
+     */
     struct Adjacent : public Side { }; 
 
     /**
@@ -30,11 +47,11 @@ namespace math {
      * cos(t) = adjacent / hypotenuse
      * tan(t) = opposite / adjacent
      * 
-     * Plus the tangent can be expresses using sine and cosine functions:
+     * Plus the tangent can be expressed using sine and cosine functions:
      * 
      * tan(t) = sin(t)   / cos(t)
      * 
-     * t is the "tilt" angle in degrees.
+     * t is the "tilt" angle in radians.
      */
 
     /**
