@@ -12,6 +12,7 @@ set (SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Segment.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Vector.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Utils.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Math.cpp
 )
 
 set (HEADERS
@@ -21,6 +22,7 @@ set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Segment.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Vector.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Utils.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/Math.h
 )
 
 set (TESTS
@@ -28,8 +30,9 @@ set (TESTS
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.h
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0001.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0002.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0003.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0101.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0102.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0103.cpp
 )
 
 add_library (raceway ${SOURCES} ${HEADERS})

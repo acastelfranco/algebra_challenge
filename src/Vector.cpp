@@ -1,5 +1,5 @@
 #include <cmath>
-#include <Utils.h>
+#include <Math.h>
 #include <Vector.h>
 
 Vector::Vector()
@@ -84,5 +84,5 @@ bool
 close(const Vector& a, const Vector& b, double epsilon)
 {
     double d = distance(a, b);
-    return utils::math::close(d, 0, epsilon);
+    return math::close(d, 0, epsilon);
 }

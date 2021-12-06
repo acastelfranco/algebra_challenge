@@ -44,6 +44,13 @@ public:
      */
     const Vector& end_pos() const;
 
+    /**
+     * @brief Compute the lenght of the segment
+     * 
+     * @return const double 
+     */
+    const double lenght() const;
+
 private:
 
     /**

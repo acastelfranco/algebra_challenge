@@ -1,41 +1,11 @@
 #include <tests.h>
 
-TEST_CASE( "[test 1] Create a raceway with 2 endpoints and 3 segments "
-            "and check segment x and reinforcements", "[test 1]")
+TEST_CASE( "[test 1] Test segment distance function", "[test 1]")
 {
-    TestData data = {
-        // endpoints
-        {
-            {"a", 0, 0, 0},
-            {"b", 0, 10, 0},
-        },
+    Endpoint_H start(new Endpoint(Vector(0, 0, 0)));
+    Endpoint_H end  (new Endpoint(Vector(3, 4, 0)));
 
-        // segments
-        {
-            {"x", "a", "b"},
-        }
-    };
-    
-    Raceway raceway;
-    TestData::NamedEndpoints endpoints;
-    TestData::NamedSegments segments;
-    data.populate(raceway, endpoints, segments);
+    Segment_H segment(new Segment(start, end));
 
-    // compute supports
-    Supports supports;
-    compute_supports(raceway, supports);
-
-    SECTION("check segment \"x\"")
-    {
-        Segment_H x = segments["x"];
-        CHECK(supports[x].size() == 2);
-        CHECK(close(distance(supports[x].front(), x->start_pos()), 1.0));
-        CHECK(close(distance(supports[x].back(), x->end_pos()), 1.0));
-    }
-
-    SECTION("check endpoint a and b reinforcements")
-    {
-        CHECK(endpoints["a"]->reinforced() == false);
-        CHECK(endpoints["b"]->reinforced() == false);
-    }
+    CHECK(segment->lenght() == 5.0);
 }

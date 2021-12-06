@@ -1,7 +1,7 @@
 #include <tests.h>
 
-TEST_CASE( "[test 2] Create a raceway with 4 endpoints and 3 segments "
-            "and check segments and reinforcements", "[test 2]" )
+TEST_CASE( "[test 103] Create a raceway with 4 endpoints and 3 segments "
+            "and check segments and reinforcements", "[test 103]" )
 {
     TestData data = {
         // endpoints
@@ -9,7 +9,7 @@ TEST_CASE( "[test 2] Create a raceway with 4 endpoints and 3 segments "
             {"a", 0, 0, 0},
             {"b", 0, 10, 0},
             {"c", 0, -10, 0},
-            {"d", 10, 0, 0},
+            {"d", 29, 0, 0},
         },
 
         // segments
@@ -48,9 +48,19 @@ TEST_CASE( "[test 2] Create a raceway with 4 endpoints and 3 segments "
     SECTION("check segment \"z\"")
     {
         Segment_H seg = segments["z"];
-        CHECK(supports[seg].size() == 2);
+        CHECK(supports[seg].size() == 4);
+
+        // check first and last
         CHECK(close(distance(supports[seg].front(), seg->start_pos()), 1.0));
         CHECK(close(distance(supports[seg].back(), seg->end_pos()), 1.0));
+
+        // check first internal support
+        Vector p1(10, 0, 0);
+        CHECK(close(supports[seg][1], p1));
+
+        // check second internal support
+        Vector p2(19, 0, 0);
+        CHECK(close(supports[seg][2], p2));
     }
 
     SECTION("check endpoints a,b,c,d reinforcements")

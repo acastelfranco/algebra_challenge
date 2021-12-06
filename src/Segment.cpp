@@ -20,11 +20,17 @@ Segment::end() const
 const Vector&
 Segment::start_pos() const
 {
-    return start()->position();
+    return m_start->position();
 }
 
 const Vector&
 Segment::end_pos() const
 {
-    return end()->position();
+    return m_end->position();
+}
+
+const double
+Segment::lenght() const
+{
+    return distance(m_start->position(), m_end->position()); 
 }
