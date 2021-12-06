@@ -32,5 +32,5 @@ Segment::end_pos() const
 const double
 Segment::lenght() const
 {
-    return distance(m_start->position(), m_end->position()); 
+    return distance(m_start->position(), m_end->position());
 }
