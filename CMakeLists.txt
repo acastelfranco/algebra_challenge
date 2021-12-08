@@ -7,20 +7,26 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set (SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/compute_supports.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Geometry.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Endpoint.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Raceway.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Segment.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Matrix.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Vector.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Format.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Utils.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Math.cpp
 )
 
 set (HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/include/compute_supports.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/Geometry.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Endpoint.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Raceway.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Segment.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/Matrix.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Vector.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/Format.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Utils.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Math.h
 )
@@ -30,6 +36,7 @@ set (TESTS
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.h
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/tests.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0001.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0002.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0101.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0102.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0103.cpp
