@@ -181,4 +181,14 @@ namespace geometry {
     Vector
     rotate(const Vector &v, double angleAroundXDeg,
             double angleAroundYdeg, double angleAroundZDeg);
+
+    /**
+     * @brief get the coordinates of a point moved over a given segment
+     * 
+     * @param start 
+     * @param end 
+     * @param units 
+     * @return Vector 
+     */
+    Vector getVectorOnSegment(const Vector &start, const Vector &end, const double units);
 }

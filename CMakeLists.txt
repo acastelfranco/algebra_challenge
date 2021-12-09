@@ -38,6 +38,7 @@ set (TESTS
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0001.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0002.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0003.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0004.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0101.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0102.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test0103.cpp

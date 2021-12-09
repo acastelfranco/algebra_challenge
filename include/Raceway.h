@@ -2,7 +2,7 @@
 #define RACEWAY_H
 
 #include <set>
-
+#include <ostream>
 #include <Segment.h>
 #include <Endpoint.h>
 
@@ -67,5 +67,8 @@ private:
      * @todo: you may add more data members here
      */
 };
+
+std::ostream&
+operator<<(std::ostream& os, const Raceway& r);
 
 #endif

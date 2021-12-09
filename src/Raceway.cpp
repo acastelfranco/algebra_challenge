@@ -11,7 +11,7 @@ Raceway::add_endpoint(Endpoint_H endpoint)
     
     assert(!endpoint->reinforced()); // should be unreinforced initially
 
-    assert(!"unimplemented");
+    m_endpoints.insert(endpoint);
 }
 
 void
@@ -28,7 +28,7 @@ Raceway::add_segment(Segment_H segment)
     assert(m_endpoints.find(segment->start()) != m_endpoints.end());
     assert(m_endpoints.find(segment->end()) != m_endpoints.end());
 
-    assert(!"unimplemented");
+    m_segments.insert(segment);
 }
 
 const Raceway::Endpoints
@@ -46,6 +46,20 @@ Raceway::segments() const
 int
 Raceway::degree(Endpoint_H endpoint) const
 {
-    assert(!"unimplemented");
-    return 0;
+    int i = 0;
+    
+    for (Segment_H segment : m_segments) {
+        i += (segment->start() == endpoint || segment->end() == endpoint);
+    }
+
+    return i;
+}
+
+std::ostream&
+operator<<(std::ostream& os, const Raceway& r) {
+    for (Endpoint_H endpoint: r.endpoints()) {
+        os << "endpoint: " << endpoint << " degree: " << r.degree(endpoint) << std::endl;
+    }
+
+    return os;
 }

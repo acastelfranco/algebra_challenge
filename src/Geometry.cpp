@@ -49,3 +49,10 @@ geometry::rotate(const Vector &v, double angleAroundXDeg,
 
     return out;
 }
+
+Vector
+geometry::getVectorOnSegment(const Vector &start, const Vector &end, const double units) {
+    Vector out = end - start;
+    out = units * out.normalized();
+    return out - start;
+}

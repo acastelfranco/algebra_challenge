@@ -9,6 +9,10 @@
 
 using Supports = std::map<Segment_H, std::vector<Vector>>;
 
+namespace constraints {
+    const static double maxSupportDistance = 10.0;
+};
+
 /**
  * @brief Compute the locations of supports for all segments in the raceway.
  * Also set the endpoints to be reinforced as required.

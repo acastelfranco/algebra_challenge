@@ -19,17 +19,20 @@ TEST_CASE( "[test 101] Create a raceway with 2 endpoints and 3 segments "
     Raceway raceway;
     TestData::NamedEndpoints endpoints;
     TestData::NamedSegments segments;
+
     data.populate(raceway, endpoints, segments);
 
     // compute supports
     Supports supports;
     compute_supports(raceway, supports);
 
+    Segment_H x = segments["x"];
     SECTION("check segment \"x\"")
     {
-        Segment_H x = segments["x"];
         CHECK(supports[x].size() == 2);
+        std::cout << "distance: " << distance(supports[x].front(), x->start_pos()) << std::endl;
         CHECK(close(distance(supports[x].front(), x->start_pos()), 1.0));
+        std::cout << "distance: " << distance(supports[x].back(), x->end_pos()) << std::endl;
         CHECK(close(distance(supports[x].back(), x->end_pos()), 1.0));
     }
 
