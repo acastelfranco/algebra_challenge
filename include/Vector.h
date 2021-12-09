@@ -3,6 +3,61 @@
 
 #include <array>
 #include <ostream>
+#include <cmath>
+
+/**
+ * @brief forward declaration for the SphericalVector cast operator
+ */
+class Vector;
+
+/**
+ * @brief Polar vector class
+ * Class describing a vector using spherical coordinates
+ * (ISO 80000-2:2019)
+ * 
+ * - from cartesian to polar coordinates -
+ * radius(r)          = sqrt(x * x + y * y + z * z)
+ * inclination(theta) = acos(z / r)
+ * azimut(fi)         = atan2(y, x)
+ * 
+ * - from polar to cartesian coordinates -
+ * x = radius * cos(azimuth) * sin(inclination)
+ * y = radius * sin(azimuth) * sin(inclination)
+ * z = radius * cos(inclination)
+ * 
+ * - distance from a to b -
+ * d = sqrt(
+ *      ((a.radius * a.radius) + (b.radius * b.radius)) -
+ *      (2 * a.radius * b.radius * cos(a.inclination - b.inclination)) -
+ *      (2 * a.radius * b.radius * sin(a.inclination) * sin(b.inclination) *
+ *      (cos(a.azimuth - b.azimuth) - 1))
+ * )
+ */
+
+class SphericalVector {
+public:
+
+    /**
+     * @brief Construct a new Polar Vector object
+     * 
+     * @param radius 
+     * @param inclination 
+     * @param azimuth 
+     */
+    SphericalVector(double radius = 0.0, double inclination = 0.0, double azimuth = 0.0) :
+        radius(radius), inclination(inclination), azimuth(azimuth) { }
+
+    /**
+     * @brief cast operator from SphericalVector to Vector
+     * 
+     * @return Vector 
+     */
+    operator Vector() const;
+
+    double radius;
+    double inclination;
+    double azimuth;
+};
 
 /**
  * @brief coordinates indexes
@@ -72,6 +127,13 @@ public:
     double const &
     operator[](Coord pos) const;
 
+    /**
+     * @brief cast operator from Vector to SphericalVector
+     * 
+     * @return SphericalVector 
+     */
+    operator SphericalVector() const;
+
 private:
     /**
      * @brief The coordinates of the vector are public.
@@ -124,6 +186,16 @@ std::ostream&
 operator<<(std::ostream& os, const Vector& a);
 
 /**
+ * @brief Output the std::ostream for debugging.
+ * 
+ * @param os 
+ * @param a 
+ * @return std::ostream& 
+ */
+std::ostream&
+operator<<(std::ostream& os, const SphericalVector& a);
+
+/**
  * @brief Returns distance between two points.
  * 
  * @param a 
@@ -132,6 +204,16 @@ operator<<(std::ostream& os, const Vector& a);
  */
 double
 distance(const Vector& a, const Vector& b);
+
+/**
+ * @brief Returns the distance between two points in polar coordinates
+ * 
+ * @param a 
+ * @param b 
+ * @return double 
+ */
+double
+distance(const SphericalVector& a, const SphericalVector& b);
 
 /**
  * @brief Returns whether the distance between two points is within an epsilon.
