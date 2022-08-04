@@ -1,7 +1,7 @@
 #include <iostream>
 #include <Utils.h>
 #include <Raceway.h>
-#include <compute_supports.h>
+#include <SupportsService.h>
 
 using namespace utils;
 
@@ -31,7 +31,7 @@ main()
 
     // compute supports
     Supports supports;
-    compute_supports(raceway, supports);
+    SupportsService::computeSupports(raceway, supports);
 
     return 0;
 }

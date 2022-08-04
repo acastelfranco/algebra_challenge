@@ -24,7 +24,7 @@ TEST_CASE( "[test 101] Create a raceway with 2 endpoints and 3 segments "
 
     // compute supports
     Supports supports;
-    compute_supports(raceway, supports);
+    SupportsService::computeSupports(raceway, supports);
 
     Segment_H x = segments["x"];
     SECTION("check segment \"x\"")

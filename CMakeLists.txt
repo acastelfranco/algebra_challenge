@@ -6,7 +6,6 @@ set (CMAKE_CXX_STANDARD 14)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set (SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/compute_supports.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Geometry.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Endpoint.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Raceway.cpp
@@ -19,7 +18,7 @@ set (SOURCES
 )
 
 set (HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/compute_supports.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/SupportsService.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Geometry.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Endpoint.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Raceway.h
